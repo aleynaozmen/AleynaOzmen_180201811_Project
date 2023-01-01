@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AleynaOzmen_180201811_Project.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AleynaOzmen_180201811_Project"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="HOME" >
+            <ShellContent ContentTemplate="{DataTemplate local:Home}" Route="Home"/>
+        </Tab>
+
+        <Tab Title="EMPLOYEE">
+            <ShellContent ContentTemplate="{DataTemplate local:EmployeePages}" Route="EmployeePages"/>
+        </Tab>
+
+        <Tab Title="DEPARTMENT" >
+            <ShellContent ContentTemplate="{DataTemplate local:DepartmentPages}" Route="DepartmentPages"/>
+        </Tab>
+
+
+
+        <Tab Title="ASSIGNMENT" >
+            <ShellContent ContentTemplate="{DataTemplate local:AssignmentPages}" Route="AssignmentPages"/>
+        </Tab>
+
+
+        <Tab Title="PROJECT" >
+            <ShellContent ContentTemplate="{DataTemplate local:ProjectPages}" Route="ProjectPages"/>
+        </Tab>
+
+
+    </TabBar>
+
+</Shell>

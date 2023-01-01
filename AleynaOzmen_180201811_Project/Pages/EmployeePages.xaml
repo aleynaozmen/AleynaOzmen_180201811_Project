@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AleynaOzmen_180201811_Project.EmployeePages"
+             Title="Employee">
+
+    <StackLayout Orientation="Vertical">
+
+        <ListView x:Name="DepartmentList" ItemTapped="DepartmentList_ItemTapped" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Dept_id}"/>
+                            <Label Text="{Binding Dept_name}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <Entry x:Name="EmployeeName" BackgroundColor ="Salmon"/>
+      
+        <Button x:Name="Add" Text="ADD" Clicked="Add_Clicked"/>
+        <Button x:Name="Show" Text="SHOW" Clicked="Show_Clicked"/>
+
+        <ListView x:Name="EmployeeList" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Emp_id}"/>
+                            <Label Text="{Binding Emp_name}"/>
+                            <Label Text="{Binding Dept_id}"/>
+                      
+                            <Button Text="DELETE" BindingContext="{Binding Emp_id}"
+                                                        Clicked="Delete_Clicked" BackgroundColor="LightBlue" TextColor="Black"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>

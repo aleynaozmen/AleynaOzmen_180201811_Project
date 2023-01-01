@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AleynaOzmen_180201811_Project.AssignmentPages">
+    <StackLayout Orientation="Vertical">
+
+        <ListView x:Name="Project" ItemTapped="Project_ItemTapped" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Project_id}"/> 
+                            <Label Text="{Binding Project_name}"/>
+                          
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView x:Name="Employee" ItemTapped="Employee_ItemTapped" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Emp_id}"/>
+                            <Label Text="{Binding Emp_name}"/>
+                          
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button x:Name="Add" Text="ADD" Clicked="Add_Clicked"/>
+        <Button x:Name="Show" Text="SHOW" Clicked="Show_Clicked"/>
+
+        <ListView x:Name="Assignment"  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Assignment_id}"/>
+                            <Label Text="{Binding Project_id}"/>
+                            <Label Text="{Binding Project_name}"/>
+                            <Label Text="{Binding Emp_id}"/>
+                            <Label Text="{Binding Emp_name}"/>
+                            <Button Text="DELETE" BindingContext="{Binding Assignment_id}"
+                                                        Clicked="Button_Clicked" BackgroundColor="LightBlue" TextColor="Black"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+    </ContentPage>
+    
